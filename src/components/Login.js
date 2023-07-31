@@ -8,12 +8,12 @@ const Login = () => {
             <div className='w-25 m-auto p-5 border-top'>
                 <form>
                     <div className="form-group">
-                        <label for="Uname">UserId</label>
+                        <label for="Uname">UserId<small className='text-danger'> *</small></label>
                         <input type="text" className="form-control" id="Uname"/>
                     </div>
                     <br />
                     <div className="form-group">
-                        <label for="Upassword">Password</label>
+                        <label for="Upassword">Password<small className='text-danger'> *</small></label>
                         <input type="password" className="form-control" id="Upassword" />
                     </div>
                     <br />
