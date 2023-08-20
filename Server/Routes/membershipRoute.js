@@ -21,7 +21,7 @@ appRouter.post('/PostData',[
     body(['name','location'],'please fill this').notEmpty(),
     body('mobile_number').notEmpty().isMobilePhone(),
 ],async(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
     const errorList=validationResult(req);
     const errors=errorList.array();
     // console.log(errors);
@@ -52,11 +52,11 @@ appRouter.get('/getData',
 (req,res)=>{
     ProviderModel.find({})
     .then((documents) => {
-        res.json(documents); // Send the retrieved documents as a JSON response
+        res.json({documents,message:"data fetched successfully!"}); // Send the retrieved documents as a JSON response
       })
       .catch((error) => {
-        console.error('Error retrieving documents:', error);
-        res.status(500).json({success:false,error: 'An error occurred while fetching documents' });
+        // console.error('Error retrieving documents:', error);
+        res.status(500).json({success:false,message: 'An error occurred while fetching documents' });
       });
 });
 
