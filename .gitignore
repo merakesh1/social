@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+/Server-Copy
+/Server - Copy.zip
+
 # production
 /build
 
